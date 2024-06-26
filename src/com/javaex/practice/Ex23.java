@@ -19,26 +19,22 @@ public class Ex23 {
 		System.out.println("나이 : "+ age);
 		System.out.println("=======================");
 		
+		boolean even = birth%2==0;
+		boolean odd = year%2==0;
 		
 		if (age<20) {
 			System.out.println("20살미만 건강검진대상이 아님");
 		}else if(age>=20) {
 			System.out.println("20살이상");
 			
-			if(birth%2==0&&year%2==0) {
+			if(even&&odd||!even&&!odd) {
 				System.out.println("건강검진해");
 				if(age>40) {
 					System.out.println("암 검사O");
 				}else {
 					System.out.println("암 검사X");
 				}
-			}else if(birth%2>0&&year%2>0) {
-				System.out.println("건강검진해");
-				if(age>40) {
-					System.out.println("암 검사O");
-				}else {
-					System.out.println("암 검사X");
-				}
+			
 			}else {
 				System.out.println("건강검진 X");
 			}
